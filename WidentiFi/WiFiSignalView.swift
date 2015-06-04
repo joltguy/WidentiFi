@@ -7,15 +7,10 @@
 //
 
 import UIKit
-import WidentiFi
 
 @IBDesignable class WiFiSignalView: UIView
 {
-	@IBInspectable var barColor:UIColor = UIColor.grayColor() {
-		didSet {
-			println("Set the color.")
-		}
-	}
+	@IBInspectable var barColor:UIColor = UIColor.grayColor()
 	
 	override func drawRect(rect: CGRect) {
 		drawSignal(frame:rect)
