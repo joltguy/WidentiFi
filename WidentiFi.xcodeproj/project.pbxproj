@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F79AB9B1B20ADFC00E8C282 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79AB9A1B20ADFC00E8C282 /* AppDelegate.swift */; };
+		1F79AB9D1B20ADFC00E8C282 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79AB9C1B20ADFC00E8C282 /* ViewController.swift */; };
+		1F79ABA01B20ADFC00E8C282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F79AB9E1B20ADFC00E8C282 /* Main.storyboard */; };
+		1F79ABA21B20ADFC00E8C282 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F79ABA11B20ADFC00E8C282 /* Images.xcassets */; };
+		1F79ABA51B20ADFC00E8C282 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F79ABA31B20ADFC00E8C282 /* LaunchScreen.xib */; };
+		1F79ABB11B20ADFC00E8C282 /* WidentiFiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79ABB01B20ADFC00E8C282 /* WidentiFiTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F79ABAB1B20ADFC00E8C282 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F79AB8D1B20ADFC00E8C282 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F79AB941B20ADFC00E8C282;
+			remoteInfo = WidentiFi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1F79AB951B20ADFC00E8C282 /* WidentiFi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidentiFi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F79AB991B20ADFC00E8C282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F79AB9A1B20ADFC00E8C282 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1F79AB9C1B20ADFC00E8C282 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F79AB9F1B20ADFC00E8C282 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F79ABA11B20ADFC00E8C282 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1F79ABA41B20ADFC00E8C282 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		1F79ABAA1B20ADFC00E8C282 /* WidentiFiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WidentiFiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F79ABAF1B20ADFC00E8C282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F79ABB01B20ADFC00E8C282 /* WidentiFiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidentiFiTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F79AB921B20ADFC00E8C282 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F79ABA71B20ADFC00E8C282 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F79AB8C1B20ADFC00E8C282 = {
+			isa = PBXGroup;
+			children = (
+				1F79AB971B20ADFC00E8C282 /* WidentiFi */,
+				1F79ABAD1B20ADFC00E8C282 /* WidentiFiTests */,
+				1F79AB961B20ADFC00E8C282 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1F79AB961B20ADFC00E8C282 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F79AB951B20ADFC00E8C282 /* WidentiFi.app */,
+				1F79ABAA1B20ADFC00E8C282 /* WidentiFiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F79AB971B20ADFC00E8C282 /* WidentiFi */ = {
+			isa = PBXGroup;
+			children = (
+				1F79AB9A1B20ADFC00E8C282 /* AppDelegate.swift */,
+				1F79AB9C1B20ADFC00E8C282 /* ViewController.swift */,
+				1F79AB9E1B20ADFC00E8C282 /* Main.storyboard */,
+				1F79ABA11B20ADFC00E8C282 /* Images.xcassets */,
+				1F79ABA31B20ADFC00E8C282 /* LaunchScreen.xib */,
+				1F79AB981B20ADFC00E8C282 /* Supporting Files */,
+			);
+			path = WidentiFi;
+			sourceTree = "<group>";
+		};
+		1F79AB981B20ADFC00E8C282 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F79AB991B20ADFC00E8C282 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1F79ABAD1B20ADFC00E8C282 /* WidentiFiTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F79ABB01B20ADFC00E8C282 /* WidentiFiTests.swift */,
+				1F79ABAE1B20ADFC00E8C282 /* Supporting Files */,
+			);
+			path = WidentiFiTests;
+			sourceTree = "<group>";
+		};
+		1F79ABAE1B20ADFC00E8C282 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F79ABAF1B20ADFC00E8C282 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F79AB941B20ADFC00E8C282 /* WidentiFi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F79ABB41B20ADFC00E8C282 /* Build configuration list for PBXNativeTarget "WidentiFi" */;
+			buildPhases = (
+				1F79AB911B20ADFC00E8C282 /* Sources */,
+				1F79AB921B20ADFC00E8C282 /* Frameworks */,
+				1F79AB931B20ADFC00E8C282 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WidentiFi;
+			productName = WidentiFi;
+			productReference = 1F79AB951B20ADFC00E8C282 /* WidentiFi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1F79ABA91B20ADFC00E8C282 /* WidentiFiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F79ABB71B20ADFC00E8C282 /* Build configuration list for PBXNativeTarget "WidentiFiTests" */;
+			buildPhases = (
+				1F79ABA61B20ADFC00E8C282 /* Sources */,
+				1F79ABA71B20ADFC00E8C282 /* Frameworks */,
+				1F79ABA81B20ADFC00E8C282 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F79ABAC1B20ADFC00E8C282 /* PBXTargetDependency */,
+			);
+			name = WidentiFiTests;
+			productName = WidentiFiTests;
+			productReference = 1F79ABAA1B20ADFC00E8C282 /* WidentiFiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F79AB8D1B20ADFC00E8C282 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Joltguy;
+				TargetAttributes = {
+					1F79AB941B20ADFC00E8C282 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					1F79ABA91B20ADFC00E8C282 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 1F79AB941B20ADFC00E8C282;
+					};
+				};
+			};
+			buildConfigurationList = 1F79AB901B20ADFC00E8C282 /* Build configuration list for PBXProject "WidentiFi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F79AB8C1B20ADFC00E8C282;
+			productRefGroup = 1F79AB961B20ADFC00E8C282 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F79AB941B20ADFC00E8C282 /* WidentiFi */,
+				1F79ABA91B20ADFC00E8C282 /* WidentiFiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F79AB931B20ADFC00E8C282 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F79ABA01B20ADFC00E8C282 /* Main.storyboard in Resources */,
+				1F79ABA51B20ADFC00E8C282 /* LaunchScreen.xib in Resources */,
+				1F79ABA21B20ADFC00E8C282 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F79ABA81B20ADFC00E8C282 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F79AB911B20ADFC00E8C282 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F79AB9D1B20ADFC00E8C282 /* ViewController.swift in Sources */,
+				1F79AB9B1B20ADFC00E8C282 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F79ABA61B20ADFC00E8C282 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F79ABB11B20ADFC00E8C282 /* WidentiFiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F79ABAC1B20ADFC00E8C282 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F79AB941B20ADFC00E8C282 /* WidentiFi */;
+			targetProxy = 1F79ABAB1B20ADFC00E8C282 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1F79AB9E1B20ADFC00E8C282 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F79AB9F1B20ADFC00E8C282 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1F79ABA31B20ADFC00E8C282 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F79ABA41B20ADFC00E8C282 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F79ABB21B20ADFC00E8C282 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F79ABB31B20ADFC00E8C282 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F79ABB51B20ADFC00E8C282 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WidentiFi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F79ABB61B20ADFC00E8C282 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WidentiFi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1F79ABB81B20ADFC00E8C282 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WidentiFiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WidentiFi.app/WidentiFi";
+			};
+			name = Debug;
+		};
+		1F79ABB91B20ADFC00E8C282 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WidentiFiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WidentiFi.app/WidentiFi";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F79AB901B20ADFC00E8C282 /* Build configuration list for PBXProject "WidentiFi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F79ABB21B20ADFC00E8C282 /* Debug */,
+				1F79ABB31B20ADFC00E8C282 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F79ABB41B20ADFC00E8C282 /* Build configuration list for PBXNativeTarget "WidentiFi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F79ABB51B20ADFC00E8C282 /* Debug */,
+				1F79ABB61B20ADFC00E8C282 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1F79ABB71B20ADFC00E8C282 /* Build configuration list for PBXNativeTarget "WidentiFiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F79ABB81B20ADFC00E8C282 /* Debug */,
+				1F79ABB91B20ADFC00E8C282 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F79AB8D1B20ADFC00E8C282 /* Project object */;
+}
