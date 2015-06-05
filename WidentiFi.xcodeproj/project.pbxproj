@@ -14,6 +14,7 @@
 		1F79ABA51B20ADFC00E8C282 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F79ABA31B20ADFC00E8C282 /* LaunchScreen.xib */; };
 		1F79ABB11B20ADFC00E8C282 /* WidentiFiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79ABB01B20ADFC00E8C282 /* WidentiFiTests.swift */; };
 		1F79ABBB1B20B86800E8C282 /* WiFiSignalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79ABBA1B20B86800E8C282 /* WiFiSignalView.swift */; };
+		1F79ABBD1B22077F00E8C282 /* WiFiStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79ABBC1B22077F00E8C282 /* WiFiStyleKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		1F79ABAF1B20ADFC00E8C282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F79ABB01B20ADFC00E8C282 /* WidentiFiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidentiFiTests.swift; sourceTree = "<group>"; };
 		1F79ABBA1B20B86800E8C282 /* WiFiSignalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WiFiSignalView.swift; sourceTree = "<group>"; };
+		1F79ABBC1B22077F00E8C282 /* WiFiStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WiFiStyleKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				1F79AB9A1B20ADFC00E8C282 /* AppDelegate.swift */,
+				1F79ABBC1B22077F00E8C282 /* WiFiStyleKit.swift */,
 				1F79AB9C1B20ADFC00E8C282 /* ViewController.swift */,
 				1F79AB9E1B20ADFC00E8C282 /* Main.storyboard */,
 				1F79ABBA1B20B86800E8C282 /* WiFiSignalView.swift */,
@@ -164,6 +167,7 @@
 				TargetAttributes = {
 					1F79AB941B20ADFC00E8C282 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = R3J2C7DMNB;
 					};
 					1F79ABA91B20ADFC00E8C282 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -216,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F79ABBB1B20B86800E8C282 /* WiFiSignalView.swift in Sources */,
+				1F79ABBD1B22077F00E8C282 /* WiFiStyleKit.swift in Sources */,
 				1F79AB9D1B20ADFC00E8C282 /* ViewController.swift in Sources */,
 				1F79AB9B1B20ADFC00E8C282 /* AppDelegate.swift in Sources */,
 			);
@@ -346,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WidentiFi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -356,6 +362,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WidentiFi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

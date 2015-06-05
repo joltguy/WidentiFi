@@ -8,12 +8,25 @@
 
 import UIKit
 
-@IBDesignable class WiFiSignalView: UIView
+@IBDesignable
+class WiFiSignalView: UIView
 {
 	@IBInspectable var barColor:UIColor = UIColor.grayColor()
+	@IBInspectable var offColor:UIColor = UIColor.darkGrayColor()
+	@IBInspectable var onColor:UIColor = UIColor.greenColor()
 	
 	override func drawRect(rect: CGRect) {
 		drawSignal(frame:rect)
+	}
+	
+	func turnOn() {
+		barColor = onColor
+		setNeedsDisplay()
+	}
+	
+	func turnOff() {
+		barColor = offColor
+		setNeedsDisplay()
 	}
 	
 	func drawSignal(#frame:CGRect) {
