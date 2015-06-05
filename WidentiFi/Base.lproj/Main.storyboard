@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gN-pP-8Xx" customClass="WiFiSignalView" customModule="WidentiFi" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gN-pP-8Xx" customClass="SymbolView" customModule="WidentiFi">
                                 <rect key="frame" x="183" y="183" width="234" height="234"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -25,17 +25,11 @@
                                     <constraint firstAttribute="width" secondItem="8gN-pP-8Xx" secondAttribute="height" multiplier="1:1" id="o18-Zn-Ktx"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
-                                        <color key="value" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="symbolInt">
+                                        <integer key="value" value="0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Unknown Network" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQh-G5-97D">
-                                <rect key="frame" x="229" y="425" width="142" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaR-9P-gAI">
                                 <rect key="frame" x="183" y="550" width="234" height="30"/>
                                 <state key="normal" title="Settings">
@@ -45,6 +39,12 @@
                                     <action selector="settingsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mKr-tJ-fS4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unknown Network" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQh-G5-97D">
+                                <rect key="frame" x="229" y="154" width="142" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
@@ -52,6 +52,7 @@
                             <constraint firstAttribute="centerX" secondItem="8gN-pP-8Xx" secondAttribute="centerX" id="1t5-1j-KVR"/>
                             <constraint firstItem="8gN-pP-8Xx" firstAttribute="width" secondItem="QaR-9P-gAI" secondAttribute="width" id="FL5-jv-JFI"/>
                             <constraint firstItem="YQh-G5-97D" firstAttribute="centerX" secondItem="8gN-pP-8Xx" secondAttribute="centerX" id="VNs-U5-JNu"/>
+                            <constraint firstItem="8gN-pP-8Xx" firstAttribute="top" secondItem="YQh-G5-97D" secondAttribute="bottom" constant="8" id="ZpD-XN-ee0"/>
                             <constraint firstAttribute="centerX" secondItem="QaR-9P-gAI" secondAttribute="centerX" id="jMp-Pe-JnY"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QaR-9P-gAI" secondAttribute="bottom" constant="20" id="qmP-P8-NDf"/>
                             <constraint firstAttribute="centerY" secondItem="8gN-pP-8Xx" secondAttribute="centerY" id="rEB-Zi-6Zz"/>
@@ -59,7 +60,7 @@
                     </view>
                     <connections>
                         <outlet property="networkName" destination="YQh-G5-97D" id="exE-cp-HhI"/>
-                        <outlet property="signalView" destination="8gN-pP-8Xx" id="76y-uF-Id0"/>
+                        <outlet property="symbolView" destination="8gN-pP-8Xx" id="Kec-1b-a4v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

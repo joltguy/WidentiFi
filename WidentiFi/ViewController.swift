@@ -13,8 +13,8 @@ import SystemConfiguration.CaptiveNetwork
 
 class ViewController: UIViewController {
 
-	@IBOutlet weak var signalView: WiFiSignalView!
 	@IBOutlet weak var networkName: UILabel!
+	@IBOutlet weak var symbolView: SymbolView!
 	
 	required init(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
@@ -79,7 +79,6 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
-		signalView.onColor = self.view.tintColor
 	}
 	
 	func openSettings() {
@@ -91,9 +90,11 @@ class ViewController: UIViewController {
 		let ssid = getSSID()
 		if ssid != "" {
 			networkName.text = ssid
-			signalView.turnOn()
+			symbolView.artColor = WiFiStyleKit.goodColor
+			symbolView.symbol = .OK
 		} else {
-			signalView.turnOff()
+			symbolView.artColor = WiFiStyleKit.badColor
+			symbolView.symbol = .Problem
 		}
 	}
 

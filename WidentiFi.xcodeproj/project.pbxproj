@@ -15,6 +15,7 @@
 		1F79ABB11B20ADFC00E8C282 /* WidentiFiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79ABB01B20ADFC00E8C282 /* WidentiFiTests.swift */; };
 		1F79ABBB1B20B86800E8C282 /* WiFiSignalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79ABBA1B20B86800E8C282 /* WiFiSignalView.swift */; };
 		1F79ABBD1B22077F00E8C282 /* WiFiStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79ABBC1B22077F00E8C282 /* WiFiStyleKit.swift */; };
+		1F79ABBF1B22090500E8C282 /* SymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79ABBE1B22090500E8C282 /* SymbolView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		1F79ABB01B20ADFC00E8C282 /* WidentiFiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidentiFiTests.swift; sourceTree = "<group>"; };
 		1F79ABBA1B20B86800E8C282 /* WiFiSignalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WiFiSignalView.swift; sourceTree = "<group>"; };
 		1F79ABBC1B22077F00E8C282 /* WiFiStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WiFiStyleKit.swift; sourceTree = "<group>"; };
+		1F79ABBE1B22090500E8C282 /* SymbolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				1F79AB9A1B20ADFC00E8C282 /* AppDelegate.swift */,
+				1F79ABBE1B22090500E8C282 /* SymbolView.swift */,
 				1F79ABBC1B22077F00E8C282 /* WiFiStyleKit.swift */,
 				1F79AB9C1B20ADFC00E8C282 /* ViewController.swift */,
 				1F79AB9E1B20ADFC00E8C282 /* Main.storyboard */,
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F79ABBB1B20B86800E8C282 /* WiFiSignalView.swift in Sources */,
+				1F79ABBF1B22090500E8C282 /* SymbolView.swift in Sources */,
 				1F79ABBD1B22077F00E8C282 /* WiFiStyleKit.swift in Sources */,
 				1F79AB9D1B20ADFC00E8C282 /* ViewController.swift in Sources */,
 				1F79AB9B1B20ADFC00E8C282 /* AppDelegate.swift in Sources */,
