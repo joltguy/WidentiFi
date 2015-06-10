@@ -32,7 +32,7 @@
                             </view>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaR-9P-gAI">
                                 <rect key="frame" x="183" y="550" width="234" height="30"/>
-                                <state key="normal" title="Settings">
+                                <state key="normal" title="WiFi Settings">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -45,20 +45,30 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fp-to-Ntj">
+                                <rect key="frame" x="183" y="425" width="234" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="8gN-pP-8Xx" secondAttribute="centerX" id="1t5-1j-KVR"/>
+                            <constraint firstAttribute="centerX" secondItem="4fp-to-Ntj" secondAttribute="centerX" id="46N-tb-AeF"/>
                             <constraint firstItem="8gN-pP-8Xx" firstAttribute="width" secondItem="QaR-9P-gAI" secondAttribute="width" id="FL5-jv-JFI"/>
+                            <constraint firstItem="4fp-to-Ntj" firstAttribute="width" secondItem="8gN-pP-8Xx" secondAttribute="width" id="FZe-PS-UJ5"/>
                             <constraint firstItem="YQh-G5-97D" firstAttribute="centerX" secondItem="8gN-pP-8Xx" secondAttribute="centerX" id="VNs-U5-JNu"/>
                             <constraint firstItem="8gN-pP-8Xx" firstAttribute="top" secondItem="YQh-G5-97D" secondAttribute="bottom" constant="8" id="ZpD-XN-ee0"/>
                             <constraint firstAttribute="centerX" secondItem="QaR-9P-gAI" secondAttribute="centerX" id="jMp-Pe-JnY"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QaR-9P-gAI" secondAttribute="bottom" constant="20" id="qmP-P8-NDf"/>
                             <constraint firstAttribute="centerY" secondItem="8gN-pP-8Xx" secondAttribute="centerY" id="rEB-Zi-6Zz"/>
+                            <constraint firstItem="4fp-to-Ntj" firstAttribute="top" secondItem="8gN-pP-8Xx" secondAttribute="bottom" constant="8" id="xKp-6j-SVk"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ipAddress" destination="4fp-to-Ntj" id="kxc-sa-Wbf"/>
                         <outlet property="networkName" destination="YQh-G5-97D" id="exE-cp-HhI"/>
                         <outlet property="symbolView" destination="8gN-pP-8Xx" id="Kec-1b-a4v"/>
                     </connections>

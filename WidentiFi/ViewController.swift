@@ -7,69 +7,16 @@
 //
 
 import UIKit
-import Foundation
-import CoreFoundation
 import SystemConfiguration.CaptiveNetwork
 
 class ViewController: UIViewController {
 
 	@IBOutlet weak var networkName: UILabel!
+	@IBOutlet weak var ipAddress: UILabel!
 	@IBOutlet weak var symbolView: SymbolView!
 	
 	required init(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
-		
-//		CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), nil, ViewController.networkChanged, "com.apple.system.config.network_change", nil, CFNotificationSuspensionBehavior.DeliverImmediately)
-		
-//		CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), //center
-//			NULL, // observer
-//			{}, // callback
-//			"com.apple.system.config.network_change", // event name
-//			NULL, // object
-//			CFNotificationSuspensionBehavior.DeliverImmediately);
-	}
-	
-//	func networkChanged(center:CFNotificationCenter!, observer:UnsafeMutablePointer<Void>, name:CFString!, obj:UnsafePointer<Void>, userInfo:CFDictionary?) {
-//		println("Network changed")
-//	}
-	
-//	static onNotifyCallback(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo)
-//	{
-//		NSString* notifyName = (NSString*)name;
-//		// this check should really only be necessary if you reuse this one callback method
-//		//  for multiple Darwin notification events
-//		if ([notifyName isEqualToString:@"com.apple.system.config.network_change"]) {
-//			// use the Captive Network API to get more information at this point
-//			//  http://stackoverflow.com/a/4714842/119114
-//		} else {
-//			NSLog(@"intercepted %@", notifyName);
-//		}
-//	}
-	
-	// Found this function here: http://pastebin.com/VBahkiQu
-	func getSSID() -> String {
-		var currentSSID = ""
-		let interfaces = CNCopySupportedInterfaces()
-		
-		if interfaces != nil {
-			let interfacesArray = interfaces.takeRetainedValue() as! [String]
-			
-			if interfacesArray.count > 0 {
-				let interfaceName = interfacesArray[0] as String
-				let unsafeInterfaceData = CNCopyCurrentNetworkInfo(interfaceName)
-				if unsafeInterfaceData != nil {
-					let interfaceData = unsafeInterfaceData.takeRetainedValue() as Dictionary!
-					currentSSID = interfaceData["SSID"] as! String
-				} else {
-					currentSSID = ""
-				}
-			} else {
-				currentSSID = ""
-			}
-		} else {
-			currentSSID = ""
-		}
-		return currentSSID
 	}
 	
 	override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -87,6 +34,7 @@ class ViewController: UIViewController {
 	
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
+		updateIPAddress()
 		let ssid = getSSID()
 		if ssid != "" {
 			networkName.text = ssid
@@ -100,6 +48,49 @@ class ViewController: UIViewController {
 
 	@IBAction func settingsButtonTapped(sender: UIButton) {
 		openSettings()
+	}
+	
+	// Fetch the SSID of the current WiFi connection
+	// Found this function here: http://pastebin.com/VBahkiQu
+	func getSSID() -> String {
+		var currentSSID = ""
+		let interfaces = CNCopySupportedInterfaces()
+		
+		if interfaces != nil {
+			let interfacesArray = interfaces.takeRetainedValue() as! [String]
+			
+			if interfacesArray.count > 0 {
+				let interfaceName = interfacesArray[0] as String
+				let unsafeInterfaceData = CNCopyCurrentNetworkInfo(interfaceName)
+				if unsafeInterfaceData != nil {
+					let interfaceData = unsafeInterfaceData.takeRetainedValue() as Dictionary!
+					currentSSID = interfaceData["SSID"] as! String
+				}
+			}
+		}
+		return currentSSID
+	}
+	
+	
+	func updateIPAddress() {
+		let ipChecker = NSURL(string: "http://checkip.dyndns.org")!
+		var ip = "..."
+		
+		let request = NSURLRequest(URL: ipChecker, cachePolicy: .ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 20)
+		let queue = NSOperationQueue()
+		NSURLConnection.sendAsynchronousRequest(request, queue: queue) {
+			(response:NSURLResponse?, data:NSData?, error:NSError?) -> Void in
+			if error == nil {
+				if let responseData = data {
+					if let html = NSString(data: responseData, encoding: NSUTF8StringEncoding) as? String,
+					   let ip = html.matchesForRegex("\\b([0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3})\\b").first {
+						dispatch_async(dispatch_get_main_queue(), {
+							self.ipAddress.text = ip
+						})
+					}
+				}
+			}
+		}
 	}
 
 }
