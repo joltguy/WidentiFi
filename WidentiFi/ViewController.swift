@@ -28,32 +28,32 @@ class ViewController: UIViewController {
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 	
-	func openSettings() {
-		UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
-	}
-	
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
 		updateIPAddress()
-		let ssid = getSSID()
-		if ssid != "" {
+		if let ssid = getSSID() {
 			networkName.text = ssid
 			symbolView.artColor = WiFiStyleKit.goodColor
 			symbolView.symbol = .OK
 		} else {
+			networkName.text = "Wi-Fi Network Unavailable"
 			symbolView.artColor = WiFiStyleKit.badColor
 			symbolView.symbol = .Problem
 		}
 	}
-
+	
 	@IBAction func settingsButtonTapped(sender: UIButton) {
 		openSettings()
 	}
+
+	func openSettings() {
+		UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
+	}
 	
 	// Fetch the SSID of the current WiFi connection
-	// Found this function here: http://pastebin.com/VBahkiQu
-	func getSSID() -> String {
-		var currentSSID = ""
+	// Based on this code: http://pastebin.com/VBahkiQu
+	func getSSID() -> String? {
+		var currentSSID:String?
 		let interfaces = CNCopySupportedInterfaces()
 		
 		if interfaces != nil {
@@ -64,17 +64,17 @@ class ViewController: UIViewController {
 				let unsafeInterfaceData = CNCopyCurrentNetworkInfo(interfaceName)
 				if unsafeInterfaceData != nil {
 					let interfaceData = unsafeInterfaceData.takeRetainedValue() as Dictionary!
-					currentSSID = interfaceData["SSID"] as! String
+					currentSSID = interfaceData["SSID"] as? String
 				}
 			}
 		}
 		return currentSSID
 	}
 	
-	
+	// Fetch external IP address by hitting a web service
 	func updateIPAddress() {
 		let ipChecker = NSURL(string: "http://checkip.dyndns.org")!
-		var ip = "..."
+		var ip = ""
 		
 		let request = NSURLRequest(URL: ipChecker, cachePolicy: .ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 20)
 		let queue = NSOperationQueue()
