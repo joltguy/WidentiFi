@@ -8,19 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		1F50345D1B2A0D41000020B8 /* NetworkNotifierCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F50345C1B2A0D41000020B8 /* NetworkNotifierCallback.m */; };
+		1F5034661B2B5C75000020B8 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5034651B2B5C75000020B8 /* NotificationCenter.framework */; };
+		1F50346B1B2B5C75000020B8 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F50346A1B2B5C75000020B8 /* TodayViewController.swift */; };
+		1F50346D1B2B5C75000020B8 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F50346C1B2B5C75000020B8 /* MainInterface.storyboard */; };
+		1F5034701B2B5C75000020B8 /* WidentiFi Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1F5034631B2B5C75000020B8 /* WidentiFi Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1F79AB9B1B20ADFC00E8C282 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79AB9A1B20ADFC00E8C282 /* AppDelegate.swift */; };
 		1F79AB9D1B20ADFC00E8C282 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79AB9C1B20ADFC00E8C282 /* ViewController.swift */; };
 		1F79ABA01B20ADFC00E8C282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F79AB9E1B20ADFC00E8C282 /* Main.storyboard */; };
 		1F79ABA21B20ADFC00E8C282 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F79ABA11B20ADFC00E8C282 /* Images.xcassets */; };
 		1F79ABA51B20ADFC00E8C282 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F79ABA31B20ADFC00E8C282 /* LaunchScreen.xib */; };
 		1F79ABB11B20ADFC00E8C282 /* WidentiFiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79ABB01B20ADFC00E8C282 /* WidentiFiTests.swift */; };
-		1F79ABBB1B20B86800E8C282 /* WiFiSignalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79ABBA1B20B86800E8C282 /* WiFiSignalView.swift */; };
 		1F79ABBD1B22077F00E8C282 /* WiFiStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79ABBC1B22077F00E8C282 /* WiFiStyleKit.swift */; };
 		1F79ABBF1B22090500E8C282 /* SymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79ABBE1B22090500E8C282 /* SymbolView.swift */; };
 		1F79ABC11B284E6B00E8C282 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79ABC01B284E6B00E8C282 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1F50346E1B2B5C75000020B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F79AB8D1B20ADFC00E8C282 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F5034621B2B5C75000020B8;
+			remoteInfo = "WidentiFi Widget";
+		};
 		1F79ABAB1B20ADFC00E8C282 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1F79AB8D1B20ADFC00E8C282 /* Project object */;
@@ -30,10 +40,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1F5034741B2B5C75000020B8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1F5034701B2B5C75000020B8 /* WidentiFi Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1F50345B1B2A0D41000020B8 /* WidentiFi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WidentiFi-Bridging-Header.h"; sourceTree = "<group>"; };
 		1F50345C1B2A0D41000020B8 /* NetworkNotifierCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkNotifierCallback.m; sourceTree = "<group>"; };
 		1F50345E1B2A0D8B000020B8 /* NetworkNotifierCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkNotifierCallback.h; sourceTree = "<group>"; };
+		1F5034631B2B5C75000020B8 /* WidentiFi Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WidentiFi Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F5034651B2B5C75000020B8 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		1F5034691B2B5C75000020B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F50346A1B2B5C75000020B8 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		1F50346C1B2B5C75000020B8 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		1F79AB951B20ADFC00E8C282 /* WidentiFi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidentiFi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F79AB991B20ADFC00E8C282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F79AB9A1B20ADFC00E8C282 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +80,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1F5034601B2B5C75000020B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5034661B2B5C75000020B8 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1F79AB921B20ADFC00E8C282 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -68,11 +105,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F5034641B2B5C75000020B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F5034651B2B5C75000020B8 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F5034671B2B5C75000020B8 /* WidentiFi Widget */ = {
+			isa = PBXGroup;
+			children = (
+				1F50346A1B2B5C75000020B8 /* TodayViewController.swift */,
+				1F50346C1B2B5C75000020B8 /* MainInterface.storyboard */,
+				1F5034681B2B5C75000020B8 /* Supporting Files */,
+			);
+			path = "WidentiFi Widget";
+			sourceTree = "<group>";
+		};
+		1F5034681B2B5C75000020B8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F5034691B2B5C75000020B8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		1F79AB8C1B20ADFC00E8C282 = {
 			isa = PBXGroup;
 			children = (
 				1F79AB971B20ADFC00E8C282 /* WidentiFi */,
 				1F79ABAD1B20ADFC00E8C282 /* WidentiFiTests */,
+				1F5034671B2B5C75000020B8 /* WidentiFi Widget */,
+				1F5034641B2B5C75000020B8 /* Frameworks */,
 				1F79AB961B20ADFC00E8C282 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +147,7 @@
 			children = (
 				1F79AB951B20ADFC00E8C282 /* WidentiFi.app */,
 				1F79ABAA1B20ADFC00E8C282 /* WidentiFiTests.xctest */,
+				1F5034631B2B5C75000020B8 /* WidentiFi Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,6 +200,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1F5034621B2B5C75000020B8 /* WidentiFi Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F5034711B2B5C75000020B8 /* Build configuration list for PBXNativeTarget "WidentiFi Widget" */;
+			buildPhases = (
+				1F50345F1B2B5C75000020B8 /* Sources */,
+				1F5034601B2B5C75000020B8 /* Frameworks */,
+				1F5034611B2B5C75000020B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WidentiFi Widget";
+			productName = "WidentiFi Widget";
+			productReference = 1F5034631B2B5C75000020B8 /* WidentiFi Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		1F79AB941B20ADFC00E8C282 /* WidentiFi */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F79ABB41B20ADFC00E8C282 /* Build configuration list for PBXNativeTarget "WidentiFi" */;
@@ -141,10 +224,12 @@
 				1F79AB911B20ADFC00E8C282 /* Sources */,
 				1F79AB921B20ADFC00E8C282 /* Frameworks */,
 				1F79AB931B20ADFC00E8C282 /* Resources */,
+				1F5034741B2B5C75000020B8 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1F50346F1B2B5C75000020B8 /* PBXTargetDependency */,
 			);
 			name = WidentiFi;
 			productName = WidentiFi;
@@ -178,6 +263,10 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Joltguy;
 				TargetAttributes = {
+					1F5034621B2B5C75000020B8 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = R3J2C7DMNB;
+					};
 					1F79AB941B20ADFC00E8C282 = {
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = R3J2C7DMNB;
@@ -203,11 +292,20 @@
 			targets = (
 				1F79AB941B20ADFC00E8C282 /* WidentiFi */,
 				1F79ABA91B20ADFC00E8C282 /* WidentiFiTests */,
+				1F5034621B2B5C75000020B8 /* WidentiFi Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1F5034611B2B5C75000020B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F50346D1B2B5C75000020B8 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1F79AB931B20ADFC00E8C282 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -228,11 +326,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1F50345F1B2B5C75000020B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F50346B1B2B5C75000020B8 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1F79AB911B20ADFC00E8C282 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F79ABBB1B20B86800E8C282 /* WiFiSignalView.swift in Sources */,
 				1F79ABC11B284E6B00E8C282 /* Extensions.swift in Sources */,
 				1F50345D1B2A0D41000020B8 /* NetworkNotifierCallback.m in Sources */,
 				1F79ABBF1B22090500E8C282 /* SymbolView.swift in Sources */,
@@ -253,6 +358,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1F50346F1B2B5C75000020B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F5034621B2B5C75000020B8 /* WidentiFi Widget */;
+			targetProxy = 1F50346E1B2B5C75000020B8 /* PBXContainerItemProxy */;
+		};
 		1F79ABAC1B20ADFC00E8C282 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1F79AB941B20ADFC00E8C282 /* WidentiFi */;
@@ -280,6 +390,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1F5034721B2B5C75000020B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WidentiFi Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1F5034731B2B5C75000020B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "WidentiFi Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		1F79ABB21B20ADFC00E8C282 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -427,6 +563,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1F5034711B2B5C75000020B8 /* Build configuration list for PBXNativeTarget "WidentiFi Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F5034721B2B5C75000020B8 /* Debug */,
+				1F5034731B2B5C75000020B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		1F79AB901B20ADFC00E8C282 /* Build configuration list for PBXProject "WidentiFi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

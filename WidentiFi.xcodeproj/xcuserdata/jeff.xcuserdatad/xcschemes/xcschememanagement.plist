@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>WidentiFi Widget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>WidentiFi.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1F5034621B2B5C75000020B8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1F79AB941B20ADFC00E8C282</key>
 		<dict>
 			<key>primary</key>
