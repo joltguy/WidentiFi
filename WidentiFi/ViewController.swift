@@ -15,21 +15,38 @@ class ViewController: UIViewController {
 	@IBOutlet weak var ipAddress: UILabel!
 	@IBOutlet weak var symbolView: SymbolView!
 	
-	required init(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder)
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		// I'm using an Objective-C class to listen for this Darwin Notification as it requires a C function pointer
+		CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), nil, NetworkNotifierCallback.notifierProc(), "com.apple.system.config.network_change", nil, CFNotificationSuspensionBehavior.DeliverImmediately)
+		// My C function simply posts a nice NSNotification that I can listen for here in Swift
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("networkChanged"), name: "network.changed", object: nil)
+	}
+	
+	deinit {
+		NSNotificationCenter.defaultCenter().removeObserver(self)
+	}
+	
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		refresh()
 	}
 	
 	override func preferredStatusBarStyle() -> UIStatusBarStyle {
 		return .LightContent
 	}
 	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+	
+	@IBAction func settingsButtonTapped(sender: UIButton) {
+		openSettings()
+	}
+
+	func openSettings() {
+		UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
 	}
 	
-	override func viewWillAppear(animated: Bool) {
-		super.viewWillAppear(animated)
+	func refresh() {
 		updateIPAddress()
 		if let ssid = getSSID() {
 			networkName.text = ssid
@@ -42,12 +59,9 @@ class ViewController: UIViewController {
 		}
 	}
 	
-	@IBAction func settingsButtonTapped(sender: UIButton) {
-		openSettings()
-	}
-
-	func openSettings() {
-		UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
+	func networkChanged() {
+		println("Networking change detected. Refreshing the UI.")
+		refresh()
 	}
 	
 	// Fetch the SSID of the current WiFi connection
@@ -76,7 +90,7 @@ class ViewController: UIViewController {
 		let ipChecker = NSURL(string: "http://checkip.dyndns.org")!
 		var ip = ""
 		
-		let request = NSURLRequest(URL: ipChecker, cachePolicy: .ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 20)
+		let request = NSURLRequest(URL: ipChecker, cachePolicy: .ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 30)
 		let queue = NSOperationQueue()
 		NSURLConnection.sendAsynchronousRequest(request, queue: queue) {
 			(response:NSURLResponse?, data:NSData?, error:NSError?) -> Void in

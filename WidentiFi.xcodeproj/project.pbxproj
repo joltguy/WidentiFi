@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F50345D1B2A0D41000020B8 /* NetworkNotifierCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F50345C1B2A0D41000020B8 /* NetworkNotifierCallback.m */; };
 		1F79AB9B1B20ADFC00E8C282 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79AB9A1B20ADFC00E8C282 /* AppDelegate.swift */; };
 		1F79AB9D1B20ADFC00E8C282 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79AB9C1B20ADFC00E8C282 /* ViewController.swift */; };
 		1F79ABA01B20ADFC00E8C282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F79AB9E1B20ADFC00E8C282 /* Main.storyboard */; };
@@ -30,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F50345B1B2A0D41000020B8 /* WidentiFi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WidentiFi-Bridging-Header.h"; sourceTree = "<group>"; };
+		1F50345C1B2A0D41000020B8 /* NetworkNotifierCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkNotifierCallback.m; sourceTree = "<group>"; };
+		1F50345E1B2A0D8B000020B8 /* NetworkNotifierCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkNotifierCallback.h; sourceTree = "<group>"; };
 		1F79AB951B20ADFC00E8C282 /* WidentiFi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidentiFi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F79AB991B20ADFC00E8C282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F79AB9A1B20ADFC00E8C282 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +99,9 @@
 				1F79ABA11B20ADFC00E8C282 /* Images.xcassets */,
 				1F79ABA31B20ADFC00E8C282 /* LaunchScreen.xib */,
 				1F79AB981B20ADFC00E8C282 /* Supporting Files */,
+				1F50345C1B2A0D41000020B8 /* NetworkNotifierCallback.m */,
+				1F50345E1B2A0D8B000020B8 /* NetworkNotifierCallback.h */,
+				1F50345B1B2A0D41000020B8 /* WidentiFi-Bridging-Header.h */,
 			);
 			path = WidentiFi;
 			sourceTree = "<group>";
@@ -227,6 +234,7 @@
 			files = (
 				1F79ABBB1B20B86800E8C282 /* WiFiSignalView.swift in Sources */,
 				1F79ABC11B284E6B00E8C282 /* Extensions.swift in Sources */,
+				1F50345D1B2A0D41000020B8 /* NetworkNotifierCallback.m in Sources */,
 				1F79ABBF1B22090500E8C282 /* SymbolView.swift in Sources */,
 				1F79ABBD1B22077F00E8C282 /* WiFiStyleKit.swift in Sources */,
 				1F79AB9D1B20ADFC00E8C282 /* ViewController.swift in Sources */,
@@ -359,10 +367,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WidentiFi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WidentiFi/WidentiFi-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -370,10 +381,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WidentiFi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WidentiFi/WidentiFi-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -430,6 +443,7 @@
 				1F79ABB61B20ADFC00E8C282 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F79ABB71B20ADFC00E8C282 /* Build configuration list for PBXNativeTarget "WidentiFiTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +452,7 @@
 				1F79ABB91B20ADFC00E8C282 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
