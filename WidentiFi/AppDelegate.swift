@@ -20,9 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 	
 	func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-		println("Calling application bundle id: \(sourceApplication)")
-		println("URL scheme: \(url.scheme)")
-		println("URL query: \(url.query)")
+//		println("Calling application bundle id: \(sourceApplication)")
+//		println("URL scheme: \(url.scheme)")
+//		println("URL query: \(url.query)")
 		return true
 	}
 

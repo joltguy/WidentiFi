@@ -12,27 +12,27 @@ import SystemConfiguration.CaptiveNetwork
 
 class TodayViewController: UIViewController, NCWidgetProviding {
         
-	@IBOutlet weak var infoLabel: UILabel!
+	@IBOutlet weak var widgetButton: UIButton!
 	var previousNetwork: String?
 	
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
     }
-    
+	
+	func widgetMarginInsetsForProposedMarginInsets(defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
+		return UIEdgeInsetsMake(5.0, defaultMarginInsets.left, 5.0, defaultMarginInsets.right)
+	}
+	
     func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
-        // Perform any setup necessary in order to update the view.
-		
-		
-		
 		if let ssid = getSSID() {
-			infoLabel.text = "✅ Connected to: \(ssid)"
+			widgetButton.setTitle("✅ Connected to: \(ssid)", forState: .Normal)
 			if ssid == previousNetwork {
 				completionHandler(NCUpdateResult.NoData)
 			}
 			previousNetwork = ssid
 		} else {
-			infoLabel.text = "🚫 No Wi-Fi Connection"
+			widgetButton.setTitle("🚫 No Wi-Fi Connection", forState: .Normal)
 		}
 
         // If an error is encountered, use NCUpdateResult.Failed
@@ -63,4 +63,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 		return currentSSID
 	}
     
+	@IBAction func buttonTapped(sender: UIButton) {
+		self.extensionContext?.openURL(NSURL(string: "widentifi://today")!, completionHandler: nil)
+	}
 }
