@@ -12,6 +12,8 @@
 		1F50346B1B2B5C75000020B8 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F50346A1B2B5C75000020B8 /* TodayViewController.swift */; };
 		1F50346D1B2B5C75000020B8 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F50346C1B2B5C75000020B8 /* MainInterface.storyboard */; };
 		1F5034701B2B5C75000020B8 /* WidentiFi Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1F5034631B2B5C75000020B8 /* WidentiFi Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1F5034751B2B614E000020B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F79ABA11B20ADFC00E8C282 /* Images.xcassets */; };
+		1F5034761B2B635C000020B8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79ABC01B284E6B00E8C282 /* Extensions.swift */; };
 		1F79AB9B1B20ADFC00E8C282 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79AB9A1B20ADFC00E8C282 /* AppDelegate.swift */; };
 		1F79AB9D1B20ADFC00E8C282 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79AB9C1B20ADFC00E8C282 /* ViewController.swift */; };
 		1F79ABA01B20ADFC00E8C282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F79AB9E1B20ADFC00E8C282 /* Main.storyboard */; };
@@ -303,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F50346D1B2B5C75000020B8 /* MainInterface.storyboard in Resources */,
+				1F5034751B2B614E000020B8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F50346B1B2B5C75000020B8 /* TodayViewController.swift in Sources */,
+				1F5034761B2B635C000020B8 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
