@@ -9,6 +9,6 @@ This is where WidentiFi can help. It includes a handy Today Extension so you can
 ![Screenshot](http://f.cl.ly/items/1o0z3L3z2F1o2R06300V/WidentiFi-Today.jpg)
 
 ##Any other reasons?
-I enjoy programming in Swift and I wanted to share something (hopeuflly) useful on GitHub. :)
+I enjoy programming in Swift and I wanted to share something (hopefully) useful on GitHub. :)
 
 
